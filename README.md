@@ -11,13 +11,13 @@
 
 <br/>
 
-### 🌐 [**🇬🇧 English Documentation**](#-english-documentation) &nbsp;&nbsp;|&nbsp;&nbsp; [**🇹🇷 Türkçe Dokümantasyon**](#-türkçe-dokümantasyon)
+### 🌐 [**🇬🇧 English Documentation**](#english-documentation) &nbsp;&nbsp;|&nbsp;&nbsp; [**🇹🇷 Türkçe Dokümantasyon**](#turkce-dokumantasyon)
 
 </div>
 
 ---
 
-<a id="-english-documentation"></a>
+<a id="english-documentation"></a>
 
 # 🇬🇧 Power Electronics — 16 SMPS Topologies Design & Live Formula Suite
 
@@ -70,148 +70,24 @@ flowchart TD
 
 ## 🔌 Covered 16 SMPS Topologies
 
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Topology</th>
-<th>Isolation</th>
-<th>Conversion Type</th>
-<th>Typical Power &amp; Key Engineering Trait</th>
-<th>TI Ref</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><b>01</b></td>
-<td><b>Buck Converter</b></td>
-<td>Non-Isolated</td>
-<td>Step-Down ($V_{out} &lt; V_{in}$)</td>
-<td>Continuous output current, low output ripple, no RHPZ</td>
-<td>Ch. 3</td>
-</tr>
-<tr>
-<td><b>02</b></td>
-<td><b>Boost Converter</b></td>
-<td>Non-Isolated</td>
-<td>Step-Up ($V_{out} &gt; V_{in}$)</td>
-<td>Continuous input current, pulsating diode current, exhibits RHPZ</td>
-<td>Ch. 4</td>
-</tr>
-<tr>
-<td><b>03</b></td>
-<td><b>Inverting Buck-Boost</b></td>
-<td>Non-Isolated</td>
-<td>Step-Up/Down ($-V_{out}$)</td>
-<td>Negative output polarity, single inductor, exhibits RHPZ</td>
-<td>Ch. 5</td>
-</tr>
-<tr>
-<td><b>04</b></td>
-<td><b>SEPIC Converter</b></td>
-<td>Non-Isolated</td>
-<td>Step-Up/Down ($+V_{out}$)</td>
-<td>Non-inverting output, series coupling capacitor provides DC blocking</td>
-<td>Ch. 6</td>
-</tr>
-<tr>
-<td><b>05</b></td>
-<td><b>Ćuk Converter</b></td>
-<td>Non-Isolated</td>
-<td>Step-Up/Down ($-V_{out}$)</td>
-<td>Continuous input &amp; output currents, capacitive energy transfer</td>
-<td>Ch. 7</td>
-</tr>
-<tr>
-<td><b>06</b></td>
-<td><b>Zeta Converter</b></td>
-<td>Non-Isolated</td>
-<td>Step-Up/Down ($+V_{out}$)</td>
-<td>Non-inverting buck-boost with continuous output current &amp; <b>no RHPZ</b></td>
-<td>Ch. 8</td>
-</tr>
-<tr>
-<td><b>07</b></td>
-<td><b>Flyback Converter</b></td>
-<td>Isolated</td>
-<td>Step-Up/Down</td>
-<td>&lt; 100 W; coupled inductor stores energy, minimal component count</td>
-<td>Ch. 9</td>
-</tr>
-<tr>
-<td><b>08</b></td>
-<td><b>Two-Switch Flyback</b></td>
-<td>Isolated</td>
-<td>Step-Up/Down</td>
-<td>MOSFET voltage stress clamped to $V_{in,max}$; leakage energy recycled</td>
-<td>Ch. 10</td>
-</tr>
-<tr>
-<td><b>09</b></td>
-<td><b>Active Clamp Forward</b></td>
-<td>Isolated</td>
-<td>Step-Down Derived</td>
-<td>Active reset allows $D &gt; 0.5$, reduced switch voltage stress</td>
-<td>Ch. 11</td>
-</tr>
-<tr>
-<td><b>10</b></td>
-<td><b>Single-Switch Forward</b></td>
-<td>Isolated</td>
-<td>Step-Down Derived</td>
-<td>100–300 W; third reset winding limits duty cycle ($D_{max} &lt; 0.5$)</td>
-<td>Ch. 12</td>
-</tr>
-<tr>
-<td><b>11</b></td>
-<td><b>Two-Switch Forward</b></td>
-<td>Isolated</td>
-<td>Step-Down Derived</td>
-<td>Switches clamped to $V_{in,max}$, high reliability for industrial supplies</td>
-<td>Ch. 13</td>
-</tr>
-<tr>
-<td><b>12</b></td>
-<td><b>Push-Pull Converter</b></td>
-<td>Isolated</td>
-<td>Step-Down Derived</td>
-<td>Bidirectional core excitation, low primary conduction loss</td>
-<td>Ch. 14</td>
-</tr>
-<tr>
-<td><b>13</b></td>
-<td><b>Weinberg Converter</b></td>
-<td>Isolated</td>
-<td>Current-Fed Push-Pull</td>
-<td>Aerospace &amp; satellite power buses; inherent overcurrent protection</td>
-<td>Ch. 15</td>
-</tr>
-<tr>
-<td><b>14</b></td>
-<td><b>Half-Bridge Converter</b></td>
-<td>Isolated</td>
-<td>Step-Down Derived</td>
-<td>200–500 W; switch voltage stress limited to $V_{in,max}$</td>
-<td>Ch. 16</td>
-</tr>
-<tr>
-<td><b>15</b></td>
-<td><b>Full-Bridge Converter</b></td>
-<td>Isolated</td>
-<td>Step-Down Derived</td>
-<td>&gt; 500 W; maximum transformer utilization, low primary switch stress</td>
-<td>Ch. 17</td>
-</tr>
-<tr>
-<td><b>16</b></td>
-<td><b>Phase-Shifted Full-Bridge (PSFB)</b></td>
-<td>Isolated</td>
-<td>ZVS Full-Bridge</td>
-<td>High-power (&gt; 1 kW) Zero-Voltage Switching (ZVS) for high efficiency</td>
-<td>Ch. 18</td>
-</tr>
-</tbody>
-</table>
+| # | Topology | Isolation | Conversion Type | Typical Power & Key Engineering Trait | TI Ref |
+| :---: | :--- | :---: | :--- | :--- | :---: |
+| **01** | **Buck Converter** | Non-Isolated | Step-Down ($V_{out} < V_{in}$) | Continuous output current, low output ripple, no RHPZ | Ch. 3 |
+| **02** | **Boost Converter** | Non-Isolated | Step-Up ($V_{out} > V_{in}$) | Continuous input current, pulsating diode current, exhibits RHPZ | Ch. 4 |
+| **03** | **Inverting Buck-Boost** | Non-Isolated | Step-Up/Down ($-V_{out}$) | Negative output polarity, single inductor, exhibits RHPZ | Ch. 5 |
+| **04** | **SEPIC Converter** | Non-Isolated | Step-Up/Down ($+V_{out}$) | Non-inverting output, series coupling capacitor provides DC blocking | Ch. 6 |
+| **05** | **Ćuk Converter** | Non-Isolated | Step-Up/Down ($-V_{out}$) | Continuous input & output currents, capacitive energy transfer | Ch. 7 |
+| **06** | **Zeta Converter** | Non-Isolated | Step-Up/Down ($+V_{out}$) | Non-inverting buck-boost with continuous output current & **no RHPZ** | Ch. 8 |
+| **07** | **Flyback Converter** | Isolated | Step-Up/Down | < 100 W; coupled inductor stores energy, minimal component count | Ch. 9 |
+| **08** | **Two-Switch Flyback** | Isolated | Step-Up/Down | MOSFET voltage stress clamped to $V_{in,max}$; leakage energy recycled | Ch. 10 |
+| **09** | **Active Clamp Forward** | Isolated | Step-Down Derived | Active reset allows $D > 0.5$, reduced switch voltage stress | Ch. 11 |
+| **10** | **Single-Switch Forward** | Isolated | Step-Down Derived | 100–300 W; third reset winding limits duty cycle ($D_{max} < 0.5$) | Ch. 12 |
+| **11** | **Two-Switch Forward** | Isolated | Step-Down Derived | Switches clamped to $V_{in,max}$, high reliability for industrial supplies | Ch. 13 |
+| **12** | **Push-Pull Converter** | Isolated | Step-Down Derived | Bidirectional core excitation, low primary conduction loss | Ch. 14 |
+| **13** | **Weinberg Converter** | Isolated | Current-Fed Push-Pull | Aerospace & satellite power buses; inherent overcurrent protection | Ch. 15 |
+| **14** | **Half-Bridge Converter** | Isolated | Step-Down Derived | 200–500 W; switch voltage stress limited to $V_{in,max}$ | Ch. 16 |
+| **15** | **Full-Bridge Converter** | Isolated | Step-Down Derived | > 500 W; maximum transformer utilization, low primary switch stress | Ch. 17 |
+| **16** | **Phase-Shifted Full-Bridge (PSFB)** | Isolated | ZVS Full-Bridge | High-power (> 1 kW) Zero-Voltage Switching (ZVS) for high efficiency | Ch. 18 |
 
 ---
 
@@ -246,7 +122,7 @@ xdg-open TI_16_Canli_Hesaplayici.html
 ---
 ---
 
-<a id="-türkçe-dokümantasyon"></a>
+<a id="turkce-dokumantasyon"></a>
 
 # 🇹🇷 Güç Elektroniği — 16 Anahtarlamalı Güç Kaynağı (SMPS) Topolojisi Tasarım ve Hesaplama Paketi
 
@@ -280,148 +156,24 @@ xdg-open TI_16_Canli_Hesaplayici.html
 
 ## 🔌 Kapsanan 16 Güç Kaynağı Topolojisi
 
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Topoloji Adı</th>
-<th>İzolasyon</th>
-<th>Dönüşüm Tipi</th>
-<th>Tipik Güç &amp; Mühendislik Karakteristiği</th>
-<th>TI Referansı</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><b>01</b></td>
-<td><b>Buck Converter</b></td>
-<td>İzolesiz</td>
-<td>Alçaltıcı ($V_{out} &lt; V_{in}$)</td>
-<td>Sürekli çıkış akımı, düşük çıkış ripple gerilimi, RHPZ içermez</td>
-<td>Bölüm 3</td>
-</tr>
-<tr>
-<td><b>02</b></td>
-<td><b>Boost Converter</b></td>
-<td>İzolesiz</td>
-<td>Yükseltici ($V_{out} &gt; V_{in}$)</td>
-<td>Sürekli giriş akımı, darbeli diyot akımı, kontrol döngüsünde RHPZ bulunur</td>
-<td>Bölüm 4</td>
-</tr>
-<tr>
-<td><b>03</b></td>
-<td><b>Inverting Buck-Boost</b></td>
-<td>İzolesiz</td>
-<td>Alçaltıcı/Yükseltici ($-V_{out}$)</td>
-<td>Negatif polariteli çıkış, tek bobinli yapı, RHPZ içerir</td>
-<td>Bölüm 5</td>
-</tr>
-<tr>
-<td><b>04</b></td>
-<td><b>SEPIC Converter</b></td>
-<td>İzolesiz</td>
-<td>Alçaltıcı/Yükseltici ($+V_{out}$)</td>
-<td>Pozitif çıkışlı, seri kuplaj kapasitörü ile giriş-çıkış DC izolasyonu</td>
-<td>Bölüm 6</td>
-</tr>
-<tr>
-<td><b>05</b></td>
-<td><b>Ćuk Converter</b></td>
-<td>İzolesiz</td>
-<td>Alçaltıcı/Yükseltici ($-V_{out}$)</td>
-<td>Hem giriş hem çıkışta sürekli akım, kapasitif enerji aktarımı</td>
-<td>Bölüm 7</td>
-</tr>
-<tr>
-<td><b>06</b></td>
-<td><b>Zeta Converter</b></td>
-<td>İzolesiz</td>
-<td>Alçaltıcı/Yükseltici ($+V_{out}$)</td>
-<td>Pozitif çıkışlı, sürekli çıkış akımlı ve <b>RHPZ içermeyen</b> buck-boost</td>
-<td>Bölüm 8</td>
-</tr>
-<tr>
-<td><b>07</b></td>
-<td><b>Flyback Converter</b></td>
-<td>İzoleli</td>
-<td>Alçaltıcı/Yükseltici</td>
-<td>&lt; 100 W; kuplajlı endüktör ile enerji depolama, düşük eleman sayısı</td>
-<td>Bölüm 9</td>
-</tr>
-<tr>
-<td><b>08</b></td>
-<td><b>Two-Switch Flyback</b></td>
-<td>İzoleli</td>
-<td>Alçaltıcı/Yükseltici</td>
-<td>MOSFET gerilim stresi $V_{in,max}$ ile sınırlı, kaçak endüktans enerjisi geri kazanımlı</td>
-<td>Bölüm 10</td>
-</tr>
-<tr>
-<td><b>09</b></td>
-<td><b>Active Clamp Forward</b></td>
-<td>İzoleli</td>
-<td>Alçaltıcı Türevli</td>
-<td>Aktif kenetleme ile $D &gt; 0.5$ çalışma imkanı ve düşük anahtar stresi</td>
-<td>Bölüm 11</td>
-</tr>
-<tr>
-<td><b>10</b></td>
-<td><b>Single-Switch Forward</b></td>
-<td>İzoleli</td>
-<td>Alçaltıcı Türevli</td>
-<td>100–300 W; sıfırlama sargısı nedeniyle görev çevrimi $D_{max} &lt; 0.5$ ile sınırlı</td>
-<td>Bölüm 12</td>
-</tr>
-<tr>
-<td><b>11</b></td>
-<td><b>Two-Switch Forward</b></td>
-<td>İzoleli</td>
-<td>Alçaltıcı Türevli</td>
-<td>Anahtar gerilimleri $V_{in,max}$ ile kenetlenir, yüksek endüstriyel güvenilirlik</td>
-<td>Bölüm 13</td>
-</tr>
-<tr>
-<td><b>12</b></td>
-<td><b>Push-Pull Converter</b></td>
-<td>İzoleli</td>
-<td>Alçaltıcı Türevli</td>
-<td>Çift yönlü nüve uyarımı, düşük primer iletim kaybı</td>
-<td>Bölüm 14</td>
-</tr>
-<tr>
-<td><b>13</b></td>
-<td><b>Weinberg Converter</b></td>
-<td>İzoleli</td>
-<td>Akım Beslemeli İt-Çek</td>
-<td>Uzay ve uydu güç sistemleri; doğal aşırı akım korumalı mimari</td>
-<td>Bölüm 15</td>
-</tr>
-<tr>
-<td><b>14</b></td>
-<td><b>Half-Bridge Converter</b></td>
-<td>İzoleli</td>
-<td>Alçaltıcı Türevli</td>
-<td>200–500 W; anahtar gerilim stresi $V_{in,max}$ seviyesinde</td>
-<td>Bölüm 16</td>
-</tr>
-<tr>
-<td><b>15</b></td>
-<td><b>Full-Bridge Converter</b></td>
-<td>İzoleli</td>
-<td>Alçaltıcı Türevli</td>
-<td>&gt; 500 W; maksimum trafo kullanımı ve düşük primer akım/gerilim stresi</td>
-<td>Bölüm 17</td>
-</tr>
-<tr>
-<td><b>16</b></td>
-<td><b>Phase-Shifted Full-Bridge (PSFB)</b></td>
-<td>İzoleli</td>
-<td>ZVS Tam Köprü</td>
-<td>Yüksek güçlü (&gt; 1 kW) sistemlerde Sıfır Gerilimde Anahtarlama (ZVS) ile yüksek verim</td>
-<td>Bölüm 18</td>
-</tr>
-</tbody>
-</table>
+| # | Topoloji Adı | İzolasyon | Dönüşüm Tipi | Tipik Güç & Mühendislik Karakteristiği | TI Referansı |
+| :---: | :--- | :---: | :--- | :--- | :---: |
+| **01** | **Buck Converter** | İzolesiz | Alçaltıcı ($V_{out} < V_{in}$) | Sürekli çıkış akımı, düşük çıkış ripple gerilimi, RHPZ içermez | Bölüm 3 |
+| **02** | **Boost Converter** | İzolesiz | Yükseltici ($V_{out} > V_{in}$) | Sürekli giriş akımı, darbeli diyot akımı, kontrol döngüsünde RHPZ bulunur | Bölüm 4 |
+| **03** | **Inverting Buck-Boost** | İzolesiz | Alçaltıcı/Yükseltici ($-V_{out}$) | Negatif polariteli çıkış, tek bobinli yapı, RHPZ içerir | Bölüm 5 |
+| **04** | **SEPIC Converter** | İzolesiz | Alçaltıcı/Yükseltici ($+V_{out}$) | Pozitif çıkışlı, seri kuplaj kapasitörü ile giriş-çıkış DC izolasyonu | Bölüm 6 |
+| **05** | **Ćuk Converter** | İzolesiz | Alçaltıcı/Yükseltici ($-V_{out}$) | Hem giriş hem çıkışta sürekli akım, kapasitif enerji aktarımı | Bölüm 7 |
+| **06** | **Zeta Converter** | İzolesiz | Alçaltıcı/Yükseltici ($+V_{out}$) | Pozitif çıkışlı, sürekli çıkış akımlı ve **RHPZ içermeyen** buck-boost | Bölüm 8 |
+| **07** | **Flyback Converter** | İzoleli | Alçaltıcı/Yükseltici | < 100 W; kuplajlı endüktör ile enerji depolama, düşük eleman sayısı | Bölüm 9 |
+| **08** | **Two-Switch Flyback** | İzoleli | Alçaltıcı/Yükseltici | MOSFET gerilim stresi $V_{in,max}$ ile sınırlı, kaçak endüktans enerjisi geri kazanımlı | Bölüm 10 |
+| **09** | **Active Clamp Forward** | İzoleli | Alçaltıcı Türevli | Aktif kenetleme ile $D > 0.5$ çalışma imkanı ve düşük anahtar stresi | Bölüm 11 |
+| **10** | **Single-Switch Forward** | İzoleli | Alçaltıcı Türevli | 100–300 W; sıfırlama sargısı nedeniyle görev çevrimi $D_{max} < 0.5$ ile sınırlı | Bölüm 12 |
+| **11** | **Two-Switch Forward** | İzoleli | Alçaltıcı Türevli | Anahtar gerilimleri $V_{in,max}$ ile kenetlenir, yüksek endüstriyel güvenilirlik | Bölüm 13 |
+| **12** | **Push-Pull Converter** | İzoleli | Alçaltıcı Türevli | Çift yönlü nüve uyarımı, düşük primer iletim kaybı | Bölüm 14 |
+| **13** | **Weinberg Converter** | İzoleli | Akım Beslemeli İt-Çek | Uzay ve uydu güç sistemleri; doğal aşırı akım korumalı mimari | Bölüm 15 |
+| **14** | **Half-Bridge Converter** | İzoleli | Alçaltıcı Türevli | 200–500 W; anahtar gerilim stresi $V_{in,max}$ seviyesinde | Bölüm 16 |
+| **15** | **Full-Bridge Converter** | İzoleli | Alçaltıcı Türevli | > 500 W; maksimum trafo kullanımı ve düşük primer akım/gerilim stresi | Bölüm 17 |
+| **16** | **Phase-Shifted Full-Bridge (PSFB)** | İzoleli | ZVS Tam Köprü | Yüksek güçlü (> 1 kW) sistemlerde Sıfır Gerilimde Anahtarlama (ZVS) ile yüksek verim | Bölüm 18 |
 
 ---
 
@@ -465,6 +217,6 @@ xdg-open TI_16_Canli_Hesaplayici.html
 <div align="center">
 
 **Designed for Power Electronics Engineers, Researchers & Students ⚡**  
-**[⬆ Back to Top / Başa Dön](#-english-documentation)**
+**[⬆ Back to Top / Başa Dön](#english-documentation)**
 
 </div>
