@@ -11,6 +11,11 @@
 
 <br/>
 
+[![Launch Live Calculator](https://img.shields.io/badge/🚀_CANLI_HESAPLAYICIYI_AÇ_(LIVE_STUDIO)-TI_16_Canli_Hesaplayici.html-2563eb?style=for-the-badge)](https://raw.githack.com/rasittaflan/Power_Electronics/main/TI_16_Canli_Hesaplayici.html)
+[![Launch Interactive Table](https://img.shields.io/badge/⚡_İNTERAKTİF_TABLOYU_AÇ_(LIVE_TABLE)-LaTeX_Studio-7c3aed?style=for-the-badge)](https://raw.githack.com/rasittaflan/Power_Electronics/main/TI_16_Guc_Kaynagi_Topolojisi_Interaktif_Tablo.html)
+
+<br/>
+
 ### 🌐 [**🇬🇧 English Documentation**](#english-documentation) &nbsp;&nbsp;|&nbsp;&nbsp; [**🇹🇷 Türkçe Dokümantasyon**](#turkce-dokumantasyon)
 
 </div>
@@ -58,13 +63,13 @@ flowchart TD
 
 ## 📁 Repository File Structure
 
-| File | Format | Purpose & Capabilities |
-| :--- | :---: | :--- |
-| **[`TI_16_Canli_Hesaplayici.html`](./TI_16_Canli_Hesaplayici.html)** | `HTML5 / JS` | **Flagship Interactive Design Studio:** Embedded TI schematics, high-res topology comparison poster, offline MathML formulas, `localStorage` persistence, and JSON export. |
-| **[`TI_16_Guc_Kaynagi_Topolojisi_Interaktif_Tablo.html`](./TI_16_Guc_Kaynagi_Topolojisi_Interaktif_Tablo.html)** | `HTML5 / JS` | **Fast Interactive Table & LaTeX Studio:** Lightweight calculator with instant one-click LaTeX & Unicode formula copy for papers and technical reports. |
-| **[`TI_16_Guc_Kaynagi_Topolojisi_Tasarim_ve_Formul_Hesaplayici.xlsx`](./TI_16_Guc_Kaynagi_Topolojisi_Tasarim_ve_Formul_Hesaplayici.xlsx)** | `Excel (.xlsx)` | **Master Engineering Workbook:** 16 topology tabs with 400 active Excel formulas, input cells (`B5:B18`), and automated stress/thermal calculations. |
-| **[`TI_16_Guc_Kaynagi_Topolojisi_Tasarim_ve_Formul_Hesaplayici.ods`](./TI_16_Guc_Kaynagi_Topolojisi_Tasarim_ve_Formul_Hesaplayici.ods)** | `Calc (.ods)` | **LibreOffice / OpenDocument Workbook:** Full open-source office suite compatibility with identical live formula structure. |
-| **[`TI_16_HTML_Kontrol_Notlari.md`](./TI_16_HTML_Kontrol_Notlari.md)** | `Markdown` | **Verification & Engineering Notes:** Documents the 1-to-1 parity tests between the Excel workbook and JavaScript engine, plus modeling assumptions. |
+| File | Format | Live Launch / Download | Purpose & Capabilities |
+| :--- | :---: | :---: | :--- |
+| **[`TI_16_Canli_Hesaplayici.html`](./TI_16_Canli_Hesaplayici.html)** | `HTML5 / JS` | [**🚀 Launch Live**](https://raw.githack.com/rasittaflan/Power_Electronics/main/TI_16_Canli_Hesaplayici.html) | **Flagship Interactive Design Studio:** Embedded TI schematics, high-res topology comparison poster, offline MathML formulas, `localStorage` persistence, and JSON export. |
+| **[`TI_16_Guc_Kaynagi_Topolojisi_Interaktif_Tablo.html`](./TI_16_Guc_Kaynagi_Topolojisi_Interaktif_Tablo.html)** | `HTML5 / JS` | [**⚡ Launch Live**](https://raw.githack.com/rasittaflan/Power_Electronics/main/TI_16_Guc_Kaynagi_Topolojisi_Interaktif_Tablo.html) | **Fast Interactive Table & LaTeX Studio:** Lightweight calculator with instant one-click LaTeX & Unicode formula copy for papers and technical reports. |
+| **[`TI_16_Guc_Kaynagi_Topolojisi_Tasarim_ve_Formul_Hesaplayici.xlsx`](./TI_16_Guc_Kaynagi_Topolojisi_Tasarim_ve_Formul_Hesaplayici.xlsx)** | `Excel (.xlsx)` | [**📥 View / Download**](./TI_16_Guc_Kaynagi_Topolojisi_Tasarim_ve_Formul_Hesaplayici.xlsx) | **Master Engineering Workbook:** 16 topology tabs with 400 active Excel formulas, input cells (`B5:B18`), and automated stress/thermal calculations. |
+| **[`TI_16_Guc_Kaynagi_Topolojisi_Tasarim_ve_Formul_Hesaplayici.ods`](./TI_16_Guc_Kaynagi_Topolojisi_Tasarim_ve_Formul_Hesaplayici.ods)** | `Calc (.ods)` | [**📥 View / Download**](./TI_16_Guc_Kaynagi_Topolojisi_Tasarim_ve_Formul_Hesaplayici.ods) | **LibreOffice / OpenDocument Workbook:** Full open-source office suite compatibility with identical live formula structure. |
+| **[`TI_16_HTML_Kontrol_Notlari.md`](./TI_16_HTML_Kontrol_Notlari.md)** | `Markdown` | [**📄 Read Notes**](./TI_16_HTML_Kontrol_Notlari.md) | **Verification & Engineering Notes:** Documents the 1-to-1 parity tests between the Excel workbook and JavaScript engine, plus modeling assumptions. |
 
 ---
 
@@ -144,13 +149,13 @@ xdg-open TI_16_Canli_Hesaplayici.html
 
 ## 📁 Depodaki Dosyalar ve İçerikleri
 
-| Dosya Adı | Format | Açıklama ve Kullanım Amacı |
-| :--- | :---: | :--- |
-| **[`TI_16_Canli_Hesaplayici.html`](./TI_16_Canli_Hesaplayici.html)** | `HTML5 / JS` | **Gelişmiş Canlı Tasarım Stüdyosu:** 16 topolojinin orijinal devre şemalarını, karşılaştırma posterini, MathML tabanlı matematiksel denklemleri, `localStorage` kaydını ve **JSON dışa aktarma** özelliklerini barındıran kapsamlı tek dosya uygulaması. |
-| **[`TI_16_Guc_Kaynagi_Topolojisi_Interaktif_Tablo.html`](./TI_16_Guc_Kaynagi_Topolojisi_Interaktif_Tablo.html)** | `HTML5 / JS` | **Hızlı İnteraktif Tablo & LaTeX Stüdyosu:** Hafif ve hızlı çalışan, tez ve raporlar için tek tıkla LaTeX/Unicode formül kopyalama özelliğine sahip canlı web tablosu. |
-| **[`TI_16_Guc_Kaynagi_Topolojisi_Tasarim_ve_Formul_Hesaplayici.xlsx`](./TI_16_Guc_Kaynagi_Topolojisi_Tasarim_ve_Formul_Hesaplayici.xlsx)** | `Excel (.xlsx)` | **Microsoft Excel Hesap Tablosu:** 16 topoloji sekmesi ve 400 aktif Excel formülü içeren ana mühendislik tablosu. |
-| **[`TI_16_Guc_Kaynagi_Topolojisi_Tasarim_ve_Formul_Hesaplayici.ods`](./TI_16_Guc_Kaynagi_Topolojisi_Tasarim_ve_Formul_Hesaplayici.ods)** | `Calc (.ods)` | **LibreOffice Calc Hesap Tablosu:** Açık kaynak ofis yazılımlarıyla tam uyumlu `.ods` formatındaki canlı formül tablosu. |
-| **[`TI_16_HTML_Kontrol_Notlari.md`](./TI_16_HTML_Kontrol_Notlari.md)** | `Markdown` | **Doğrulama ve Mühendislik Notları:** Excel ile JavaScript hesap motoru arasındaki 400 formülün birebir doğrulama testlerini ve kullanılan mühendislik varsayımlarını açıklayan teknik not. |
+| Dosya Adı | Format | Canlı Bağlantı / İndir | Açıklama ve Kullanım Amacı |
+| :--- | :---: | :---: | :--- |
+| **[`TI_16_Canli_Hesaplayici.html`](./TI_16_Canli_Hesaplayici.html)** | `HTML5 / JS` | [**🚀 Canlı Aç**](https://raw.githack.com/rasittaflan/Power_Electronics/main/TI_16_Canli_Hesaplayici.html) | **Gelişmiş Canlı Tasarım Stüdyosu:** 16 topolojinin orijinal devre şemalarını, karşılaştırma posterini, MathML tabanlı matematiksel denklemleri, `localStorage` kaydını ve **JSON dışa aktarma** özelliklerini barındıran kapsamlı tek dosya uygulaması. |
+| **[`TI_16_Guc_Kaynagi_Topolojisi_Interaktif_Tablo.html`](./TI_16_Guc_Kaynagi_Topolojisi_Interaktif_Tablo.html)** | `HTML5 / JS` | [**⚡ Canlı Aç**](https://raw.githack.com/rasittaflan/Power_Electronics/main/TI_16_Guc_Kaynagi_Topolojisi_Interaktif_Tablo.html) | **Hızlı İnteraktif Tablo & LaTeX Stüdyosu:** Hafif ve hızlı çalışan, tez ve raporlar için tek tıkla LaTeX/Unicode formül kopyalama özelliğine sahip canlı web tablosu. |
+| **[`TI_16_Guc_Kaynagi_Topolojisi_Tasarim_ve_Formul_Hesaplayici.xlsx`](./TI_16_Guc_Kaynagi_Topolojisi_Tasarim_ve_Formul_Hesaplayici.xlsx)** | `Excel (.xlsx)` | [**📥 Görüntüle / İndir**](./TI_16_Guc_Kaynagi_Topolojisi_Tasarim_ve_Formul_Hesaplayici.xlsx) | **Microsoft Excel Hesap Tablosu:** 16 topoloji sekmesi ve 400 aktif Excel formülü içeren ana mühendislik tablosu. |
+| **[`TI_16_Guc_Kaynagi_Topolojisi_Tasarim_ve_Formul_Hesaplayici.ods`](./TI_16_Guc_Kaynagi_Topolojisi_Tasarim_ve_Formul_Hesaplayici.ods)** | `Calc (.ods)` | [**📥 Görüntüle / İndir**](./TI_16_Guc_Kaynagi_Topolojisi_Tasarim_ve_Formul_Hesaplayici.ods) | **LibreOffice Calc Hesap Tablosu:** Açık kaynak ofis yazılımlarıyla tam uyumlu `.ods` formatındaki canlı formül tablosu. |
+| **[`TI_16_HTML_Kontrol_Notlari.md`](./TI_16_HTML_Kontrol_Notlari.md)** | `Markdown` | [**📄 Notları Oku**](./TI_16_HTML_Kontrol_Notlari.md) | **Doğrulama ve Mühendislik Notları:** Excel ile JavaScript hesap motoru arasındaki 400 formülün birebir doğrulama testlerini ve kullanılan mühendislik varsayımlarını açıklayan teknik not. |
 
 ---
 
